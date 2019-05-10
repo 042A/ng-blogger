@@ -1,0 +1,12 @@
+<div id="main">
+    <div *ngFor="let item of subscribedPosts" (click)="goToPost(item.post_uid)">
+        <div class="general-section">
+            <h2>{{item.post_title}}</h2>
+            <h2>{{item.post_desc}}</h2>
+            <h2>{{item.post_by}}</h2>
+            <h2>{{item.post_tags}}</h2>
+            <h2>{{item.post_image}}</h2>
+            <p> {{item.post_content}}</p>
+        </div>
+    <div>
+</div>

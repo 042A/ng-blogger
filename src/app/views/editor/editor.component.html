@@ -1,0 +1,52 @@
+<div id="main">
+    <div class="general-section">
+        <h2>Title and meta</h2>
+        
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input [(ngModel)]="title" type="text" class="form-control" id="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="desc">Subtitle/description</label>
+            <input [(ngModel)]="desc"type="text" class="form-control" id="desc" >
+        </div>
+
+        <div class="form-group">
+            <label for="name">Written by</label>
+            <input [(ngModel)]="name" type="text" class="form-control" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Tags</label>
+            <input [(ngModel)]="tags" type="text" class="form-control" id="tags" >
+        </div>
+    
+
+    </div>
+
+    <div class="general-section">
+        <h2>Feature Image</h2>
+        <div class="form-group">
+                <label for="image">Image</label>
+                <input [(ngModel)]="image" type="text" class="form-control" id="image" >
+        </div>
+    </div>
+
+    <div class="general-section">
+        <h2>Content</h2>
+        <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+
+        <h5 class="html-header">HTML Output</h5>
+        <div class="html">
+        {{ htmlContent }}
+        </div>
+    </div>
+
+    <div class="general-section">
+        <h2>Save</h2>
+        <button (click)="savePost()">Save</button>
+        <button (click)="deletePost()">Delete</button>
+    </div>
+  
+</div>
